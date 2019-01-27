@@ -30,7 +30,7 @@ class Pokemon
   end
   
   def alter_hp(new_hp, db)
-    row = Pokemon.find(id, db)
+    pokemon = Pokemon.find(id, db)
     db.execute("UPDATE pokemon SET hp = #{new_hp} WHERE id = (?)", id)
     db.execute("SELECT hp FROM pokemon WHERE id = (?)", id).flatten
   end
