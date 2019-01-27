@@ -33,6 +33,7 @@ class Pokemon
     pokemon = Pokemon.find(id, db)
     db.execute("UPDATE pokemon SET hp = #{new_hp} WHERE id = (?)", id)
     db.execute("SELECT hp FROM pokemon WHERE id = (?)", id).flatten
+    binding.pry
     pokemon
   end
 end
