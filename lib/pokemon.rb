@@ -31,7 +31,7 @@ class Pokemon
   
   def alter_hp(hp, db)
     pokemon = Pokemon.find(id, db)
-    #
+    #SELECT projects.title, SUM(pledges.amount)-projects.funding_goal FROM projects
     binding.pry
   end
 end
