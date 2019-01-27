@@ -32,7 +32,7 @@ class Pokemon
   def alter_hp(new_hp, db)
     pokemon = Pokemon.find(id, db)
     #SELECT projects.title, SUM(pledges.amount)-projects.funding_goal FROM projects
-    db.execute("UPDATE pokemon SET hp = hp -  WHERE id = (?)", id)
+    db.execute("UPDATE pokemon SET hp = hp - #{new_hp} WHERE id = (?)", id)
     binding.pry
   end
 end
