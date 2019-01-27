@@ -33,6 +33,6 @@ class Pokemon
     pokemon = Pokemon.find(id, db)
     #SELECT projects.title, SUM(pledges.amount)-projects.funding_goal FROM projects
     db.execute("UPDATE pokemon SET hp = #{new_hp} WHERE id = (?)", id)
-    
+    db.execute("SELECT hp FROM ")
   end
 end
