@@ -8,7 +8,6 @@ class Pokemon
     @id = id #primary key for object
     @name = name
     @type = type
-    @hp = 60
     @db = db
     @@all << self
   end
